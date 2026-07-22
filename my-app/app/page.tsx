@@ -1,79 +1,83 @@
 const workCategories = [
   {
-    title: "Website design",
-    type: "Web / UI",
+    title: "Web Design Stuff",
+    type: "HTML / CSS / JS",
     description:
       "Live websites & interface experiments built with both modern frameworks & tools.",
     projects: [
       {
-        name: "BUSINESS WEBSITE",
-        note: "METER ELECTRIC",
-        href: "https://meterelectrical.com",
-      },
-      {
         name: "MUSIC HISTORY TIMELINE",
-        note: "HTML and CSS experiment",
+        note: "HTML & CSS experiment using Codex",
         href: "https://musichistory-gamma.vercel.app/",
       },
       {
         name: "TREND PULSE",
-        note: "React, TypeScript, Vite, and shadcn/ui for a type beat ranking app",
+        note: "Type beat ranking app using Codex",
         href: "https://github.com/vtonu/trendpulse-app",
       },
       {
+        name: "BUSINESS WEBSITE",
+        note: "METER ELECTRIC (before AI)",
+        href: "https://meterelectrical.com",
+      },
+      {
         name: "BENTO GRID MUI",
-        note: "React and Material UI test",
+        note: "React & Material UI test (before AI)",
         href: "https://github.com/vtonu/BentoGrid_UI",
       },
       {
         name: "BENTO GRID SIMPLE",
-        note: "HTML and CSS experiment",
+        note: "HTML & CSS experiment (before AI)",
         href: "https://github.com/vtonu/Simple_BentoGrid",
       },
       {
         name: "NOTIFICATION CARD SIMPLE",
-        note: "HTML and CSS experiment",
+        note: "HTML & CSS experiment (before AI)",
         href: "https://github.com/vtonu/CoolNotification_Card",
       },
     ],
   },
   {
-    title: "Game development & scripting",
+    title: "Game Dev Stuff",
     type: "Lua Systems / UX",
     description:
-      "Scripts, resources, interfaces, and custom systems for multiplayer games and community-led servers.",
+      "Scripts, resources, and custom aesthetics for multiplayer mods like MTA: San Andreas.",
     projects: [
       {
-        name: "My Custom MTA San Andreas server",
-        note: "Lua resources and server customization",
+        name: "My Custom MTA server",
+        note: "Lua scripting and UX design",
         href: "https://github.com/vtonu/mtasa-pirate",
       },
       {
-        name: "Glassmorphism UI in MTA",
-        note: "Voice Interface concept for a multiplayer server",
+        name: "Voice UI",
+        note: "Glassmorphism interface concept for a multiplayer server",
         href: "https://github.com/vtonu/glassmorphism-ui-voice",
       },
       {
-        name: "Glassmorphism UI in MTA",
-        note: "ATM interface concept for a multiplayer server",
+        name: "ATM UI",
+        note: "Glassmorphism interface concept for a multiplayer server",
         href: "https://github.com/vtonu/glassmorphism-ui-atm",
       },
     ],
   },
   {
-    title: "Game UI & college work",
-    type: "Unity / 3D",
-    description:
-      "Game interfaces, Unity work, and visual concepts made for college.",
+    title: "Game UI Stuff",
+    type: "Unity / Maya 3D",
+    description: "Game interfaces and visual concepts made in college.",
     projects: [
       {
-        name: "GAME138 SHOWCASE",
-        note: "Unity final project showcased using Aceterinity UI",
+        name: "GAME124",
+        note: "ZBrush class final project showcase (before AI)",
+        href: "https://postimg.cc/gallery/MHc7LVG/523cf795",
+      },
+      {
+        name: "GAME138",
+        note: "Unity class final project showcase (before AI)",
         href: "https://game138-aceternity-ui.vercel.app/",
       },
       {
         name: "PLAYABLE GAME DEMO",
-        note: "Game UI and visual direction",
+        note: "Game UI and visual direction (before AI)",
         href: "https://jarednovy.itch.io/mystery-meat",
       },
     ],
