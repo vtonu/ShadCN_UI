@@ -182,19 +182,10 @@ footer a:focus-visible,
 
 .project {
   display: grid;
-  grid-template-columns: 44px 1fr 24px;
+  grid-template-columns: 44px 1fr;
   gap: 20px;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
-  transition: background 160ms ease, padding 160ms ease;
-}
-
-.project:hover,
-.project:focus-visible {
-  padding-right: 14px;
-  padding-left: 14px;
-  background: var(--surface);
-  outline: none;
 }
 
 .project-number,
@@ -230,8 +221,55 @@ footer a:focus-visible,
   font-size: 14px;
 }
 
+.project-links {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color 160ms ease, padding 160ms ease, background 160ms ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  padding-right: 10px;
+  padding-left: 10px;
+  background: var(--surface);
+  outline: none;
+}
+
+.project-links a > span {
+  display: grid;
+  gap: 4px;
+}
+
+.project-links strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-links small {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 .project-arrow {
-  color: #aaa;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.25;
 }
 
 .about-copy {
@@ -251,7 +289,7 @@ footer a:focus-visible,
 
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
   gap: 20px;
   padding: 32px 0 48px;
   border-top: 1px solid var(--line);
@@ -262,6 +300,16 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+footer p:first-child {
+  grid-column: 2;
+  text-align: center;
+}
+
+footer p:nth-child(2) {
+  grid-column: 3;
+  justify-self: end;
 }
 
 @media (max-width: 760px) {
@@ -310,7 +358,7 @@ footer p {
   }
 
   .project {
-    grid-template-columns: 32px 1fr 16px;
+    grid-template-columns: 32px 1fr;
     gap: 10px;
   }
 
@@ -320,14 +368,12 @@ footer p {
     gap: 5px;
   }
 
-  .project:hover,
-  .project:focus-visible {
-    padding-right: 8px;
-    padding-left: 8px;
+  footer {
+    grid-template-columns: 1fr;
   }
 
-  footer {
-    grid-template-columns: 1fr auto;
+  footer p:first-child {
+    grid-column: 1;
   }
 
   footer p:nth-child(2) {

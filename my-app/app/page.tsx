@@ -1,37 +1,92 @@
-const projects = [
+const workCategories = [
   {
-    title: 'Meter Electric',
-    type: 'Business website',
+    title: "Website design",
+    type: "Web / UI",
     description:
-      "Web work for my dad's electrical business, built through a few versions while testing different tools and layouts.",
-    href: 'https://github.com/vtonu/meter-electric',
-    detail: 'Next.js / TypeScript / Tailwind',
+      "Live websites, interface studies, and focused front-end experiments built with both modern frameworks and plain web tools.",
+    projects: [
+      {
+        name: "BUSINESS WEBSITE",
+        note: "METER ELECTRIC",
+        href: "https://meterelectrical.com",
+      },
+      {
+        name: "MUSIC HISTORY",
+        note: "SOUND HISTORY TIMELINE",
+        href: "https://musichistory-gamma.vercel.app/",
+      },
+      {
+        name: "TREND PULSE",
+        note: "React, TypeScript, Vite, and shadcn/ui",
+        href: "https://github.com/vtonu/trendpulse-app",
+      },
+      {
+        name: "BENTO GRID MUI",
+        note: "React and Material UI study",
+        href: "https://github.com/vtonu/BentoGrid_UI",
+      },
+      {
+        name: "BENTO GRID SIMPLE",
+        note: "HTML and CSS study",
+        href: "https://github.com/vtonu/Simple_BentoGrid",
+      },
+      {
+        name: "CARD SIMPLE",
+        note: "HTML and CSS component",
+        href: "https://github.com/vtonu/CoolNotification_Card",
+      },
+    ],
   },
   {
-    title: 'MTA projects',
-    type: 'Game development',
+    title: "Game development & scripting",
+    type: "Lua / Systems",
     description:
-      'Scripts, interfaces, systems, and small tests made for Multi Theft Auto. This is where most of my recent personal work lives.',
-    href: 'https://github.com/vtonu',
-    detail: 'Lua / UI / Game systems',
+      "Scripts, resources, interfaces, and custom systems for multiplayer games and community-led servers.",
+    projects: [
+      {
+        name: "My Custom MTA San Andreas server",
+        note: "Lua resources and server customization",
+        href: "https://github.com/vtonu/mtasa-pirate",
+      },
+      {
+        name: "Glassmorphism UI in MTA",
+        note: "Voice Interface concept for a multiplayer server",
+        href: "https://github.com/vtonu/glassmorphism-ui-voice",
+      },
+      {
+        name: "Glassmorphism UI in MTA",
+        note: "ATM interface concept for a multiplayer server",
+        href: "https://github.com/vtonu/glassmorphism-ui-atm",
+      },
+    ],
   },
   {
-    title: 'Mystery Meat',
-    type: 'Game UI',
+    title: "Game UI & college work",
+    type: "Unity / 3D",
     description:
-      'A college horror game prototype. I worked on the interface and the visual direction of the game.',
-    href: 'https://jarednovy.itch.io/mystery-meat',
-    detail: 'UI / UX / Unity',
-  },
-  {
-    title: 'College archive',
-    type: 'Older work',
-    description:
-      'Web, graphic design, 3D work, and small game tests from school. Kept as an archive, not a full case study.',
-    href: 'https://github.com/vtonu',
-    detail: 'Web / Design / 3D',
+      "Game interfaces, Unity work, 3D studies, and visual concepts made for college and multiplayer projects.",
+    projects: [
+      {
+        name: "GAME138 / Aceternity UI",
+        note: "Unity final project in GAME138",
+        href: "https://game138-aceternity-ui.vercel.app/",
+      },
+      {
+        name: "Mystery Meat",
+        note: "Game UI and visual direction",
+        href: "https://jarednovy.itch.io/mystery-meat",
+      },
+    ],
   },
 ];
+
+function WorkArrow() {
+  return (
+    <svg className="project-arrow" viewBox="0 0 14 14" aria-hidden="true">
+      <path d="M3 11 11 3M5 3h6v6" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
@@ -50,11 +105,11 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <p className="eyebrow">Victor Tonu — web &amp; game projects</p>
+        <p className="eyebrow">Producer / Designer / Gamer</p>
         <h1>I make useful things for the web and games.</h1>
         <p className="intro">
-          A small set of personal work, client work for my family, and experiments made while
-          learning. Most of what I build is on GitHub.
+          A focused set of web, game, design, and media projects. Most of my
+          development work is available on GitHub.
         </p>
         <div className="hero-links">
           <a className="primary-link" href="#work">
@@ -70,30 +125,39 @@ export default function Home() {
         <div className="section-heading">
           <p className="section-index">01</p>
           <h2>Selected work</h2>
-          <p>A short list. The rest is on GitHub.</p>
+          <p>A short list. The rest of my time is spent in FL Studio.</p>
         </div>
 
         <div className="project-list">
-          {projects.map((project, index) => (
-            <a
-              className="project"
-              href={project.href}
-              key={project.title}
-              target="_blank"
-              rel="noreferrer">
-              <span className="project-number">{String(index + 1).padStart(2, '0')}</span>
+          {workCategories.map((category, index) => (
+            <article className="project" key={category.title}>
+              <span className="project-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
               <div className="project-copy">
                 <div className="project-title-row">
-                  <h3>{project.title}</h3>
-                  <span>{project.type}</span>
+                  <h3>{category.title}</h3>
+                  <span>{category.type}</span>
                 </div>
-                <p>{project.description}</p>
-                <span className="project-detail">{project.detail}</span>
+                <p>{category.description}</p>
+                <div className="project-links">
+                  {category.projects.map((project) => (
+                    <a
+                      href={project.href}
+                      key={project.name}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>
+                        <strong>{project.name}</strong>
+                        <small>{project.note}</small>
+                      </span>
+                      <WorkArrow />
+                    </a>
+                  ))}
+                </div>
               </div>
-              <span className="project-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </a>
+            </article>
           ))}
         </div>
       </section>
@@ -105,23 +169,24 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p>
-            I&apos;m Victor. I started this site in college while studying design and making small
-            web and game projects. Since then, I&apos;ve kept building when I have a reason to: work
-            for my dad&apos;s business, MTA projects, minigames, and tests that help me learn.
+            I started this site in college while studying web design, graphic
+            design, 3D art, and game development. I earned an Associate degree
+            in Digital Gaming &amp; Interactive Media from Lake Washington
+            Institute of Technology in Kirkland.
           </p>
           <p>
-            This site is a simple record of that work. For code, updates, and smaller projects,
-            GitHub is the best place to look.
+            My main work is music production, where I rank among the top 5% of
+            producers worldwide. I also create album covers, music visualizers,
+            and content for YouTube and social media. Alongside that work, I
+            build websites, multiplayer game systems, and visual projects that
+            combine design with technical skills.
           </p>
         </div>
       </section>
 
       <footer>
-        <p>Victor Tonu</p>
+        <p>Victor Tonu © 2026</p>
         <p>Built with Next.js</p>
-        <a href="https://github.com/vtonu" target="_blank" rel="noreferrer">
-          GitHub ↗
-        </a>
       </footer>
     </main>
   );
