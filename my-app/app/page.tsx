@@ -3,7 +3,7 @@ const workCategories = [
     title: "Website design",
     type: "Web / UI",
     description:
-      "Live websites, interface studies, and focused front-end experiments built with both modern frameworks and plain web tools.",
+      "Live websites & interface experiments built with both modern frameworks & tools.",
     projects: [
       {
         name: "BUSINESS WEBSITE",
@@ -11,35 +11,35 @@ const workCategories = [
         href: "https://meterelectrical.com",
       },
       {
-        name: "MUSIC HISTORY",
-        note: "SOUND HISTORY TIMELINE",
+        name: "MUSIC HISTORY TIMELINE",
+        note: "HTML and CSS experiment",
         href: "https://musichistory-gamma.vercel.app/",
       },
       {
         name: "TREND PULSE",
-        note: "React, TypeScript, Vite, and shadcn/ui",
+        note: "React, TypeScript, Vite, and shadcn/ui for a type beat ranking app",
         href: "https://github.com/vtonu/trendpulse-app",
       },
       {
         name: "BENTO GRID MUI",
-        note: "React and Material UI study",
+        note: "React and Material UI test",
         href: "https://github.com/vtonu/BentoGrid_UI",
       },
       {
         name: "BENTO GRID SIMPLE",
-        note: "HTML and CSS study",
+        note: "HTML and CSS experiment",
         href: "https://github.com/vtonu/Simple_BentoGrid",
       },
       {
-        name: "CARD SIMPLE",
-        note: "HTML and CSS component",
+        name: "NOTIFICATION CARD SIMPLE",
+        note: "HTML and CSS experiment",
         href: "https://github.com/vtonu/CoolNotification_Card",
       },
     ],
   },
   {
     title: "Game development & scripting",
-    type: "Lua / Systems",
+    type: "Lua Systems / UX",
     description:
       "Scripts, resources, interfaces, and custom systems for multiplayer games and community-led servers.",
     projects: [
@@ -64,15 +64,15 @@ const workCategories = [
     title: "Game UI & college work",
     type: "Unity / 3D",
     description:
-      "Game interfaces, Unity work, 3D studies, and visual concepts made for college and multiplayer projects.",
+      "Game interfaces, Unity work, and visual concepts made for college.",
     projects: [
       {
-        name: "GAME138 / Aceternity UI",
-        note: "Unity final project in GAME138",
+        name: "GAME138 SHOWCASE",
+        note: "Unity final project showcased using Aceterinity UI",
         href: "https://game138-aceternity-ui.vercel.app/",
       },
       {
-        name: "Mystery Meat",
+        name: "PLAYABLE GAME DEMO",
         note: "Game UI and visual direction",
         href: "https://jarednovy.itch.io/mystery-meat",
       },
@@ -108,7 +108,7 @@ export default function Home() {
         <p className="eyebrow">Producer / Designer / Gamer</p>
         <h1>I make useful things for the web and games.</h1>
         <p className="intro">
-          A focused set of web, game, design, and media projects. Most of my
+          A focused set of web, game, design, and media projects. All of my
           development work is available on GitHub.
         </p>
         <div className="hero-links">
