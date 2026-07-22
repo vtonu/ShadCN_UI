@@ -112,8 +112,8 @@ export default function Home() {
         <p className="eyebrow">Producer / Designer / Gamer</p>
         <h1>I make useful things for the web and games.</h1>
         <p className="intro">
-          A focused set of web, game, design, and media projects. All of my
-          development work is available on GitHub.
+          A focused set of aesthetically pleasing web &amp; game design
+          projects. Most of my development work is available on GitHub.
         </p>
         <div className="hero-links">
           <a className="primary-link" href="#work">
@@ -173,17 +173,17 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p>
-            I started this site in college while studying web design, graphic
-            design, 3D art, and game development. I earned an Associate degree
-            in Digital Gaming &amp; Interactive Media from Lake Washington
-            Institute of Technology in Kirkland.
+            I started this site in college while studying graphic design, 3D
+            art, and game development. I earned an Associate degree in Digital
+            Gaming &amp; Interactive Media from Lake Washington Institute of
+            Technology in Kirkland, WA.
           </p>
           <p>
             My main work is music production, where I rank among the top 5% of
-            producers worldwide. I also create album covers, music visualizers,
-            and content for YouTube and social media. Alongside that work, I
-            build websites, multiplayer game systems, and visual projects that
-            combine design with technical skills.
+            producers worldwide. I also create album covers and content for
+            social media. Alongside that work, I build websites, multiplayer
+            scripts, and visual projects that combine design with technical
+            skills.
           </p>
         </div>
       </section>

@@ -1,3 +1,3 @@
 updated portfolio using Codex on July 21, 2026.
 
-v2.9
+v3.0
